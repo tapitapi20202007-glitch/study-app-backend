@@ -16,7 +16,7 @@ app.add_middleware(
 )
 
 # Gemini APIの設定
-GEMINI_API_KEY = "AIzaSyBSQA4Y8sL3mrFOLmqng7Zqp2PP7qxrxuo" # ★ここにAPIキーを入れてください
+GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY")
 genai.configure(api_key=GEMINI_API_KEY)
 
 # 推奨モデルの設定
